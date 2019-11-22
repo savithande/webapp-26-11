@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<%= stylesheet_link_tag "show" %>
+	<title>
+		
+	</title>
+</head>
+<body>
+
+	<p id="notice"><%= notice %></p>
+<h2>
+		<%= @user.First_name %>
+
+</h2>
+<br>
+<table>
+	<tr>
+		<td>
+			  <strong>First_name:</strong>
+			  <%= @user.First_name %>
+		</td>
+		<td>
+			  <strong>Last_name:</strong>
+			  <%= @user.Last_name %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+  				<strong>age:</strong>
+ 				 <%= @user.age %>
+		</td>
+		<td>
+			<strong>date_of_joining:</strong>
+			<%= @user.date_of_joining %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<strong>Salary_per_annum:</strong>
+			<%= @user.Salary_per_annum %>
+		</td>
+		<td>
+			<strong>Salary_per_month:</strong>
+			<%= @user.Salary_per_annum %>
+		</td>
+
+	</tr>
+	<tr>
+		<td>
+			<strong>email:</strong>
+			<%= @user.email %>
+		</td>
+		<td>
+			<strong>address:</strong>
+			<%= @user.address %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<strong>Emergency_contact_name:</strong>
+			<%= @user.Emergency_contact_name %>
+		</td>
+		<td>
+			<strong>Emergency_contact_number:</strong>
+			<%= @user.Emergency_contact_number %>
+		</td>
+		
+	</tr>
+		<tr>
+		<td>
+			<strong>Mobile:</strong>
+			<%= @user.Mobile %>
+		</td>
+		<td>
+			<strong>Blood_type:</strong>
+			<%= @user.Blood_type %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<strong>Primary_skill:</strong>
+			<%= @user.Primary_skill %>
+		</td>
+		<td>
+			<strong>Secondary_skill1:</strong>
+			<%= @user.Secondary_skill1 %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<strong>Secondary_skill2:</strong>
+			<%= @user.Secondary_skill2 %>
+		</td>
+		<td>
+			<strong>Notice_period_in_days:</strong>
+			<%= @user.Notice_period_in_days %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<strong>Job role:</strong>
+			<%= @user.role %>
+		</td>
+
+	</tr>
+
+
+
+</table>
+<p>
+   
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+
+</body>
+</html>
+
+
+
+
+

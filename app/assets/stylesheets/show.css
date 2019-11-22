@@ -1,0 +1,15 @@
+ table{
+ 	 	background-color: ;
+ 	border-collapse: collapse;
+ 	width: 600px;
+ 	position: relative;
+ 	left:25% ;
+ 	text-align: center;
+
+
+ }
+ td,tr{
+ 	text-align: left;
+ 	border: brown 2px collapse;
+ 	 
+ }

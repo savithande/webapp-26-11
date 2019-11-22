@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<%= stylesheet_link_tag "index" %>
+</head>
+<body >
+	<br><br><br> 
+	<h1 style="background-color: initial;">welcome</h1>
+	
+	     <%= current_user.First_name %>  
+	 <%if %>
+	
+		<% if current_user.role == "Admin" %>
+
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <button > <%= link_to "Registration", signup_path %><br><br></button>
+				<button ><%= link_to "view Employee", users_path%><br><br></button>
+
+ 
+
+ <%elsif current_user.role == "Employee"%>
+ 	
+ 	
+
+ 	<table border="1"  id="table">
+ 		<tr>
+ 			<th>name</th>
+
+ 			<td><%= current_user.First_name%></td>
+ 		</tr>
+ 		<tr>
+ 			<th>last name</th>
+ 			<td><%= current_user.Last_name%></td>
+ 		</tr>
+ 		<tr>
+ 			<th>age</th>
+ 			<td><%= current_user.age%></td>	
+ 		</tr>
+ 		<tr>
+ 			<th>date_of_joining</th>
+ 			<td><%= current_user.date_of_joining%></td>
+ 		</tr>
+ 		<tr>
+ 			<th>Salary_per_annum</th>
+ 			<td><%= current_user.Salary_per_annum%></td>
+ 		</tr>
+ 		<tr>
+ 			<th>Salary_per_month</th>
+ 			<td><%= current_user.Salary_per_month%></td>
+ 		</tr>
+ 		<tr>
+ 			<th>email</th>
+ 			<td><%= current_user.email%></td>
+ 		</tr>
+ 		<tr>
+ 			<th>address</th>
+ 			<td><%= current_user.address%></td>
+ 		</tr>
+ 		<tr>
+ 			<th>Mobile</th>
+ 			<td><%= current_user.Mobile%></td>
+ 		</tr>
+ 		<tr>
+ 			<th>Blood_type</th>
+ 			<td><%= current_user.Blood_type%></td>
+ 		</tr>
+ 		<tr>
+ 			<th>Emergency_contact_name</th>
+ 			<td><%= current_user.Emergency_contact_name%></td>
+ 		</tr>
+ 		<tr>
+ 			<th>Emergency_contact_number</th>
+ 			<td><%= current_user.Emergency_contact_number%></td>
+ 		</tr>
+ 		<tr>
+ 			<th>Primary_skill</th>
+ 			<td><%= current_user.Primary_skill%></td>
+ 		</tr>
+ 		<tr>
+ 			<th>Secondary_skill1</th>
+ 			<td><%= current_user.Secondary_skill1%></td>
+ 		</tr>
+ 		<tr>
+ 			<th>Secondary_skill2</th>
+ 			<td><%= current_user.Secondary_skill2%></td>
+ 		</tr>
+ 
+	</table>
+
+
+	<%end%>
+ 
+    		<div class="content"> 
+    			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<button id="myBtn"><%= link_to "Log Out",logout_path %> </button>
+
+ 					 <!-- Use a button to pause/play the video with JavaScript -->
+  				
+			</div>
+ 
+    		
+    
+     
+    	
+
+	<% else %>
+    	<%= redirect_to login_path%>
+	<% end %>
+	
+
+<video autoplay muted loop id="myVideo">
+  <source src="/assets/background.mp4" type="video/mp4">
+</video>
+
+<!-- Optional: some overlay text to describe the video -->
+
+
+
+
+
+
+<!-- javsscrit for the video -->
+<script>
+// Get the video
+var video = document.getElementById("myVideo");
+
+// Get the button
+var btn = document.getElementById("myBtn");
+
+// Pause and play the video, and change the button text
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+
+
+<p id=”notice”><%= notice %></p>
+
+
+</body>
+</html>
+
+
+
+
+
+

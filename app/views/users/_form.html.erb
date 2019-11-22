@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <meta http-equiv = "Content-Type" content = "text/html; charset = iso-8859-1" />
+   <%= stylesheet_link_tag "form" %>
+
+  <title></title>
+</head>
+<body>
+
+
+  <%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<table id="customers">
+  <tr>
+    <td>
+      <%= form.label :First_name %>
+    </td>
+    <td>
+      <%= form.text_field :First_name %>
+    </td>
+  </tr>
+ <tr>
+    <td>
+      <%= form.label :Last_name %>
+    </td>
+    <td>
+      <%= form.text_field :Last_name %>
+    </td>
+  </tr>
+
+ <tr>
+    <td>
+      <%= form.label :age %>
+    </td>
+    <td>
+      <%= form.number_field :age %>
+    </td>
+  </tr>
+   <tr>
+    <td>
+      <%= form.label :date_of_joining %>
+    </td>
+    <td>
+      <%= form.datetime_field :date_of_joining %>
+    </td>
+  </tr>
+   <tr>
+    <td>
+      <%= form.label :Salary_per_annum %>
+    </td>
+    <td>
+      <%= form.number_field :Salary_per_annum %>
+    </td>
+  </tr>
+   <tr>
+    <td>
+      <%= form.label :Salary_per_month %>
+    </td>
+    <td>
+      <%= form.number_field :Salary_per_month %>
+    </td>
+  </tr>
+   <tr>
+    <td>
+      <%= form.label :email %>
+    </td>
+    <td>
+      <%= form.text_field :email %>
+    </td>
+  </tr>
+   <tr>
+    <td>
+      <%= form.label :password %>
+    </td>
+    <td>
+      <%= form.password_field :password %>
+    </td>
+  </tr>
+   <tr>
+    <td>
+      <%= form.label :password_confirmation %>
+    </td>
+    <td>
+      <%= form.password_field :password_confirmation %>
+    </td>
+  </tr>
+   <tr>
+    <td>
+      <%= form.label :address %>
+    </td>
+    <td>
+      <%= form.text_field :address %>
+    </td>
+  </tr>
+   <tr>
+    <td>
+      <%= form.label :Mobile %>
+    </td>
+    <td>
+      <%= form.number_field :Mobile %>
+    </td>
+  </tr>
+   <tr>
+    <td>
+      <%= form.label :Blood_type %>
+    </td>
+    <td>
+      <%= form.text_field :Blood_type %>
+    </td>
+  </tr>
+   <tr>
+    <td>
+      <%= form.label :Emergency_contact_name %>
+    </td>
+    <td>
+      <%= form.text_field :Emergency_contact_name %>
+    </td>
+  </tr>
+   <tr>
+    <td>
+      <%= form.label :Emergency_contact_number %>
+    </td>
+    <td>
+       <%= form.number_field :Emergency_contact_number %>
+    </td>
+  </tr>
+   <tr>
+    <td>
+      <%= form.label :Primary_skill %>
+    </td>
+    <td>
+      <%= form.text_field :Primary_skill %>
+    </td>
+  </tr>
+   <tr>
+    <td>
+      <%= form.label :Secondary_skill1 %>
+    </td>
+    <td>
+      <%= form.text_field :Secondary_skill1 %>
+    </td>
+  </tr>
+   <tr>
+    <td>
+      <%= form.label :Secondary_skill2 %>
+    </td>
+    <td>
+      <%= form.text_field :Secondary_skill2 %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%= form.label :role %>
+    </td>
+    <td>
+              <%#= form.collection_select :role, [Provider.order(:name)],:id,:name, include_blank: true %>
+          <%= form.select :role, ['Admin', 'Employee']%>
+    </td>
+  </tr>
+    <tr>
+    <td>
+      <%= form.label :Notice_period_in_days %>
+    </td>
+    <td>
+      <%= form.number_field :Notice_period_in_days %>
+    </td>
+  </tr>
+
+<tr>
+  <td>
+      <div class="actions">
+      <%= form.submit %>
+    </div>
+
+  </td>
+
+<% end %>
+
+</tr>
+</table>
+
+
+
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= stylesheet_link_tag "employee_details" %>
+
+  <title></title>
+</head>
+<body  style="background-color:  ">
+
+<p id="notice"><%= notice %></p>
+
+<h1 style="background-color: lightgray ; ">Users</h1>
+
+<table id="customers">
+  <thead>
+    <tr>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<button><%= link_to 'New', new_user_path %></button>
+
+  <button type="button">
+    <%= link_to 'Back', dashboard_path %>
+  </button>
+
+</body>
+</html>
+
+
+
+
+

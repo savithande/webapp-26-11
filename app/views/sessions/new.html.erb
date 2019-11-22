@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <%= stylesheet_link_tag "form" %>
+	<title>
+		
+	</title>
+</head>
+<body background="assets/background_img.jpg">
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<table>
+	<br><br><br>
+	<tr>
+			<p><%= alert %></p>
+			<h1>Login</h1>
+			<%= form_tag sessions_path do |form| %>
+	</tr><br><br><br><br>
+	<tr style="text-align: center;height: 25px;">
+
+		   <div   style="text-align: center;font-size: 16px;">
+		   	<td style="color: white;font-size: 20px;">
+
+		   		<%= label_tag :email %>
+		   	</td>
+		   	<td style="height: 45px;">
+		   		<%= text_field_tag :email %>
+
+		   	</td>
+		 </div>
+	</tr> 
+	<tr>
+		   <div class="field" style="text-align: center;">
+		   	<td style="color: white;font-size: 20px;">
+		   		<%= label_tag :password %>
+		   	</td>
+		   	<td style="height: 45px;">
+		   		<%= password_field_tag :password %>
+		   	</td> 
+		 </div>
+	</tr>
+	<tr>
+			<div class="actions" >
+				<td style="text-align: center;">
+					<button>
+						<%= submit_tag "Login" %>
+					</button>
+				</td>
+		 	</div>
+	</tr>
+	<% end %>
+</table>
+</body>
+</html>
+

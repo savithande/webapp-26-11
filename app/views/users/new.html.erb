@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<%= stylesheet_link_tag "form" %>
+	<title></title>
+</head>
+<body>
+	<h1 style="padding: 30px;text-align: center;color: black;font-size: 30px;background-color: #D3D3D3">Employee Registration Form</h1>
+
+	<%= render 'form', user: @user %>
+	<button type="button">
+		<%= link_to 'Back', dashboard_path %>
+	</button>
+	
+	
+</body>
+</html>
+
+
+
